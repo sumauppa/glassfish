@@ -49,6 +49,8 @@ import org.jvnet.hk2.config.DuckTyped;
  */
 @Contract
 public interface PropertyBagCustomizer {
+    public static final String DEFAULT_IMPLEMENTATION = "system default";
+    
     public Property getProperty(PropertyBag me, String name);
 
     /**
