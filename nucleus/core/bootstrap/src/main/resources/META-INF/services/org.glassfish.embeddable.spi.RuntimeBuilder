@@ -1,0 +1,4 @@
+com.sun.enterprise.glassfish.bootstrap.osgi.OSGiGlassFishRuntimeBuilder
+com.sun.enterprise.glassfish.bootstrap.StaticGlassFishRuntimeBuilder
+com.sun.enterprise.glassfish.bootstrap.osgi.StaticGlassFishRuntimeBuilder
+com.sun.enterprise.glassfish.bootstrap.osgi.UberJarGlassFishRuntimeBuilder
