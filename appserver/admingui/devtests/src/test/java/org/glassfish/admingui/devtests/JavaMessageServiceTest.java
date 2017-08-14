@@ -210,7 +210,7 @@ public class JavaMessageServiceTest extends BaseSeleniumTestClass {
     // . start the cluster
     // . change master broker to instance2
     // besides the above test update, this test needs issues GLASSFISH-22403, GLASSFISH-22050 addressed
-    //@Test
+    @Test
     public void testMasterBroker() {
         ClusterTest ct = new ClusterTest();
         try {
@@ -221,6 +221,8 @@ public class JavaMessageServiceTest extends BaseSeleniumTestClass {
             final String instance1 = clusterName + generateRandomString();
             final String instance2 = clusterName + generateRandomString();
             ct.createCluster(clusterName, instance1, instance2);
+            ct.startClusterInstance(instance1);
+            ct.startClusterInstance(instance2);
             final String ELEMENT_JMS_LINK = "treeForm:tree:configurations:" + clusterName + "-config:jmsConfiguration:jmsConfiguration_link";
 
             clickAndWait(ELEMENT_JMS_LINK, TRIGGER_JMS_SERVICE);
