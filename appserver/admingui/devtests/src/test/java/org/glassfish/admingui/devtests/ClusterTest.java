@@ -397,31 +397,12 @@ public class ClusterTest extends BaseSeleniumTestClass {
             return;
         }
 
-
-        List<String> rows = getTableRowsByValue(ID_CLUSTERS_TABLE, "Running", "col3");
-        if (!rows.isEmpty()) {
-            // Stop all instances
-            for (String row : rows) {
-                String clusterName = getText(row + ":col1");
-                this.selectTableRowByValue(ID_CLUSTERS_TABLE, clusterName);
-                //rowActionWithConfirm(ID_CLUSTERS_TABLE_STOP_BUTTON, ID_CLUSTERS_TABLE, clusterName);
-//                selenium.click(ID_CLUSTERS_TABLE_SELECT_ALL_BUTTON);
-//                waitForButtonEnabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
-//                selenium.chooseOkOnNextConfirmation();
-//                selenium.click(ID_CLUSTERS_TABLE_STOP_BUTTON);
-//                if (selenium.isConfirmationPresent()) {
-//                    selenium.getConfirmation();
-//                }
-//                waitForButtonDisabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
-            }
-            waitForButtonEnabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
-            chooseOkOnNextConfirmation();
-            pressButton(ID_CLUSTERS_TABLE_STOP_BUTTON);
-            if (isConfirmationPresent()) {
-                getConfirmation();
-            }
-            waitForButtonDisabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
-        }
+        this.selectAllTableRows(ID_CLUSTERS_TABLE, 0);
+        chooseOkOnNextConfirmation();
+        waitForButtonEnabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
+        pressButton(ID_CLUSTERS_TABLE_STOP_BUTTON);
+        waitForButtonDisabled(ID_CLUSTERS_TABLE_STOP_BUTTON);
+        getConfirmation();
 
         deleteAllTableRows(ID_CLUSTERS_TABLE, 0);
         // Delete all clusters
