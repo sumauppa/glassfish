@@ -434,7 +434,7 @@ public class ClusterTest extends BaseSeleniumTestClass {
 ////            gotoClusterPage();
 //            rowActionWithConfirm(ID_CLUSTERS_TABLE_DELETE_BUTTON, ID_CLUSTERS_TABLE, clusterName);
 //        }
-        assertTableRowCount(ID_CLUSTERS_TABLE, 0);
+        waitForTableRowCount(ID_CLUSTERS_TABLE, 0);
     }
 
     public void startClusterInstance(String instanceName) {
