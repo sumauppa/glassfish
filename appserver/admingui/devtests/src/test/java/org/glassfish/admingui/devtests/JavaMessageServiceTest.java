@@ -221,7 +221,9 @@ public class JavaMessageServiceTest extends BaseSeleniumTestClass {
             final String instance1 = clusterName + generateRandomString();
             final String instance2 = clusterName + generateRandomString();
             ct.createCluster(clusterName, instance1, instance2);
+            ct.gotoClusterInstancesPage(clusterName);
             ct.startClusterInstance(instance1);
+            ct.gotoClusterInstancesPage(clusterName);
             ct.startClusterInstance(instance2);
             final String ELEMENT_JMS_LINK = "treeForm:tree:configurations:" + clusterName + "-config:jmsConfiguration:jmsConfiguration_link";
 
