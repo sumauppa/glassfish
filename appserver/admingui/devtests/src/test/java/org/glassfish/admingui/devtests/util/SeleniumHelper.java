@@ -82,6 +82,7 @@ public class SeleniumHelper {
             if (Boolean.parseBoolean(SeleniumHelper.getParameter("debug", "false"))) {
                 logger.log(Level.INFO, "Creating new selenium instance");
             }
+            System.setProperty("webdriver.firefox.marionette", "false");
             String browser = getParameter("browser", "firefox");
 
             if ("firefox".equals(browser)) {
