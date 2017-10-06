@@ -1,20 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
-    Copyright (c) 2010-2017 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2017 Oracle and/or its affiliates. All rights reserved.
 
     The contents of this file are subject to the terms of either the GNU
     General Public License Version 2 only ("GPL") or the Common Development
     and Distribution License("CDDL") (collectively, the "License").  You
     may not use this file except in compliance with the License.  You can
     obtain a copy of the License at
-    https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html
-    or packager/legal/LICENSE.txt.  See the License for the specific
+    https://oss.oracle.com/licenses/CDDL+GPL-1.1
+    or LICENSE.txt.  See the License for the specific
     language governing permissions and limitations under the License.
 
     When distributing the software, include this License Header Notice in each
-    file and include the License file at packager/legal/LICENSE.txt.
+    file and include the License file at LICENSE.txt.
 
     GPL Classpath Exception:
     Oracle designates this particular file as subject to the "Classpath"
@@ -46,60 +47,13 @@
         <groupId>org.glassfish.hk2</groupId>
         <artifactId>nucleus-admin-hk2</artifactId>
         <version>5.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
-
-    <artifactId>config-types</artifactId>
-    <name>HK2 config types</name>
-    
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.glassfish.hk2</groupId>
-                <artifactId>osgiversion-maven-plugin</artifactId>
-            </plugin>
-           <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>bundle-manifest</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>manifest</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.glassfish.hk2</groupId>
-                <artifactId>config-generator</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate-injectors</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.glassfish.hk2</groupId>
-                <artifactId>hk2-inhabitant-generator</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate-inhabitants</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.glassfish.hk2</groupId>
-            <artifactId>hk2-config</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <groupId>org.glassfish.hk2</groupId>
+    <artifactId>hk2-examples</artifactId>
+    <packaging>pom</packaging>
+    <name>HK2 Examples</name>
+    <modules>
+        <module>ctm</module>
+    </modules>
 </project>

@@ -3,7 +3,7 @@
 
     DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
-    Copyright (c) 1997-2017 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2017 Oracle and/or its affiliates. All rights reserved.
 
     The contents of this file are subject to the terms of either the GNU
     General Public License Version 2 only ("GPL") or the Common Development
@@ -44,30 +44,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.glassfish.main</groupId>
-        <artifactId>glassfish-nucleus-parent</artifactId>
+        <groupId>org.glassfish.main.admin</groupId>
+        <artifactId>nucleus-admin</artifactId>
         <version>5.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>org.glassfish.main.admin</groupId>
-    <artifactId>nucleus-admin</artifactId>
+    <groupId>org.glassfish.hk2</groupId>
+    <artifactId>nucleus-admin-hk2</artifactId>
     <packaging>pom</packaging>
-    <name>Admin Modules</name>
+    <name>Admin HK2 Modules</name>
     <modules>
-        <module>config-api</module>
-        <module>server-mgmt</module>
-        <module>util</module>    
-        <module>cli</module>
-        <module>launcher</module>
-        <module>monitor</module>
-        <module>rest</module>
-        <module>hk2</module>
-        <module>launcher-l10n</module>
-        <module>monitor-l10n</module>
-        <module>config-api-l10n</module>
-        <module>cli-l10n</module>
-        <module>server-mgmt-l10n</module>
-        <module>util-l10n</module>
-		<module>template</module>
+        <module>hk2-config</module>
+        <module>config-types</module>
+        <module>config-generator</module>    
+        <module>examples</module>
     </modules>
 </project>
