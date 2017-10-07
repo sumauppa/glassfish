@@ -50,8 +50,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>config-generator</artifactId>
-    <packaging>pom</packaging>
-
+    <packaging>glassfish-jar</packaging>
     <name>HK2 configuration reader generator module</name>
 
     <properties>
