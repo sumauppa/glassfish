@@ -57,6 +57,7 @@
         <module>config-api</module>
         <module>server-mgmt</module>
         <module>util</module>    
+        <module>hk2</module>
         <module>cli</module>
         <module>launcher</module>
         <module>monitor</module>
