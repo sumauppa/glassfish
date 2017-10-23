@@ -369,11 +369,14 @@
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>2.4</version>
                 </plugin>
-                <!--<plugin>
+                <plugin>
                     <groupId>org.glassfish.hk2</groupId>
                     <artifactId>config-generator</artifactId>
-                    <version>${hk2.plugin.version}</version>
-                </plugin>-->
+                    <version>2.5.0-b53</version>
+                    <configuration>
+                        <excludeDependencies>hk2-config</excludeDependencies>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>

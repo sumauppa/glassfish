@@ -59,6 +59,9 @@
             <plugin>
                 <groupId>org.glassfish.hk2</groupId>
                 <artifactId>osgiversion-maven-plugin</artifactId>
+                <configuration>
+                    <excludeDependencies>hk2-config</excludeDependencies>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -88,6 +91,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <excludeDependencies>hk2-config</excludeDependencies>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
